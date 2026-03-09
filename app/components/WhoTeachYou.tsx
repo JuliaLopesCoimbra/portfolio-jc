@@ -14,7 +14,7 @@ const instructors = [
     name: "João Herker",
     image: "/person/joao.jpg",
     imagePosition: "top" as const,
-    description: "é formado em educação física, pós-graduado em bodybuilding coach, estudou com as maiores referências do Brasil e atendeu mais de 1000 alunos. Hoje, está se tornando um nome de peso entre os treinadores no país, tendo criado a Muscle Lab, ao lado de Samuel Meller, onde tudo que é ensinado dentro da Hypertrophy academy, é feito na prática, tendo mais de 300 alunos ativos",
+    description: "João Herker é nutricionista graduado, com pós-graduação em Bodybuilding Coach e Metabolismo Humano, especializado em nutrição esportiva, saúde e estética. Também é atleta de fisiculturismo e influenciador digital, reconhecido por traduzir ciência em prática de forma clara e aplicada ao cotidiano. Com experiência sólida na área, já orientou mais de 500 pessoas em processos de transformação física e metabólica, entre elas, pessoas com obesidade, falsos magros, indivíduos com extrema magreza, atletas de luta, maratonistas, atletas híbridos e fisiculturistas. Sua filosofia profissional une teoria e prática em perfeita sintonia, respeitando o metabolismo individual e ajustando o timing das estratégias nutricionais para otimizar resultados. Acredita que a verdadeira evolução é alcançada quando ciência, constância e individualidade caminham juntas.",
   },
 ];
 
@@ -42,7 +42,7 @@ export default function WhoTeachYou() {
             {instructors.map((instructor) => (
               <div
                 key={instructor.id}
-                className="relative rounded-2xl overflow-hidden border-2 border-red-600/50 bg-black/40 backdrop-blur-sm"
+                className="relative rounded-2xl overflow-hidden border-2 border-amber-600/50 bg-black/40 backdrop-blur-sm"
               >
                 {/* Card Content */}
                 <div className="relative">
@@ -82,7 +82,7 @@ export default function WhoTeachYou() {
                   {/* Text Content */}
                   <div className="p-6 md:p-8 bg-black/60">
                     {/* Name */}
-                    <h3 className="text-2xl md:text-3xl font-bold text-red-600 mb-4 font-sans">
+                    <h3 className="text-2xl md:text-3xl font-bold text-amber-600 mb-4 font-sans">
                       {instructor.name}
                     </h3>
                     

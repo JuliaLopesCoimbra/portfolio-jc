@@ -24,10 +24,10 @@ body {
   font-family: var(--font-rajdhani), ui-sans-serif, system-ui, sans-serif;
 }
 
-/* Scrollbar personalizado */
+/* Scrollbar personalizado - dourado */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #dc2626 #2b1818;
+  scrollbar-color: #d4af37 #2b1818;
 }
 
 *::-webkit-scrollbar {
@@ -41,13 +41,13 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #dc2626;
+  background: #d4af37;
   border-radius: 10px;
   border: 2px solid #2b1818;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #ef4444;
+  background: #b8860b;
 }
 
 *::-webkit-scrollbar-corner {

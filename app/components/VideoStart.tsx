@@ -78,11 +78,11 @@ export default function VideoStart() {
                   className="absolute inset-0 flex items-center justify-center group cursor-pointer"
                 >
                   {/* Concentric rings */}
-                  <div className="absolute w-20 h-20 rounded-full border-4 border-red-600 animate-ping opacity-75"></div>
-                  <div className="absolute w-20 h-20 rounded-full border-4 border-red-600"></div>
+                  <div className="absolute w-20 h-20 rounded-full border-4 border-amber-600 animate-ping opacity-75"></div>
+                  <div className="absolute w-20 h-20 rounded-full border-4 border-amber-600"></div>
                   
                   {/* Play button */}
-                  <div className="relative z-10 w-16 h-16 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors shadow-2xl">
+                  <div className="relative z-10 w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors shadow-2xl">
                     <svg
                       className="w-6 h-6 text-white ml-1"
                       fill="currentColor"
@@ -99,7 +99,7 @@ export default function VideoStart() {
 
         {/* Call to Action Button */}
         <div className="mb-8">
-          <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 shadow-2xl font-sans">
+          <button className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 shadow-2xl font-sans">
             QUERO FAZER PARTE!
           </button>
         </div>

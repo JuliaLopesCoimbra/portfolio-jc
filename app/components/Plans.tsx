@@ -1,13 +1,13 @@
 "use client";
 
 const CheckIcon = () => (
-  <svg className="w-5 h-5 shrink-0 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+  <svg className="w-5 h-5 shrink-0 text-amber-500" fill="currentColor" viewBox="0 0 20 20">
     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
   </svg>
 );
 
 const LightningIcon = () => (
-  <svg className="w-7 h-7 shrink-0 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+  <svg className="w-7 h-7 shrink-0 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
     <path d="M13 2L4 14h7l-2 8 9-12h-7l2-8z" />
   </svg>
 );
@@ -32,23 +32,38 @@ const RocketIcon = () => (
 
 const mensalFeatures = [
   "Acesso à todas as aulas",
-  "1 Modelo Ficha de treino Masculina",
-  "1 Modelo Ficha de treino feminina",
+  "3 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
+  "3 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
   "Comunidade com alunos",
-  "Inteligência artificial tutora",
+  "Acesso a Calculadora de Substituições Infinita",
+  "Calculadora de Saldo Líquido de Estímulos Semanais",
+  "Lives Quinzenais com João e Caio para tirar dúvidas",
 ];
 
-const semestralFeatures = [
+const anualFeatures = [
   "Acesso à todas as aulas",
-  "2 Modelos Fichas de treino Masculinas",
-  "2 Modelos Fichas de treino femininas",
+  "3 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
+  "3 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
   "Comunidade com alunos",
-  "Inteligência artificial tutora",
-  "Ebook: Operação Inverno",
-  "Ebook: Operação Deserto",
-  "Módulo Bônus: Como produzir conteúdo",
-  "Aula Bônus: Como conseguir patrocínio",
+  "Acesso a Calculadora de Substituições Infinita",
+  "Calculadora de Saldo Líquido de Estímulos Semanais",
+  "Lives Quinzenais com João e Caio para tirar dúvidas",
+  "Ebook: Ciclo de Carboidratos",
+  "Ebook: Cutting e Bulking",
+  "Ebook: Como montar uma dieta do Zero",
+  "Ebook: O melhor exercício para cada músculo: S-Tier",
+  "Ebook: Os 3 erros que limitam seu estímulo",
+  "Módulo Bônus: Controlando Variáveis Externas",
 ];
+
+const anualFeaturesDestacados = new Set([
+  "Ebook: Ciclo de Carboidratos",
+  "Ebook: Cutting e Bulking",
+  "Ebook: Como montar uma dieta do Zero", 
+  "Ebook: O melhor exercício para cada músculo: S-Tier",
+  "Ebook: Os 3 erros que limitam seu estímulo",
+  "Módulo Bônus: Controlando Variáveis Externas",
+]);
 
 export default function Plans() {
   return (
@@ -79,19 +94,9 @@ export default function Plans() {
               ))}
             </ul>
 
-            <div className="text-center mb-6">
-              <p className="text-gray-400 text-base">
-                De <span className="line-through">R$109,90</span> por
-              </p>
-              <p className="mt-1">
-                <span className="text-red-500 text-4xl sm:text-5xl font-bold">R$99,90</span>
-                <span className="text-gray-400 text-base">/mês</span>
-              </p>
-            </div>
-
             <a
               href="#"
-              className="block w-full py-4 bg-red-500 hover:bg-red-600 text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors"
+              className="block w-full py-4 bg-amber-500 hover:bg-amber-600 text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors"
             >
               QUERO FAZER PARTE!
             </a>
@@ -112,10 +117,10 @@ export default function Plans() {
             </div>
           </div>
 
-          {/* Coluna SEMESTRAL */}
+          {/* Coluna ANUAL */}
           <div className="flex flex-col p-10 md:p-12">
             <h2 className="text-white text-center text-xl sm:text-2xl font-semibold tracking-wider uppercase mb-5">
-              SEMESTRAL
+              ANUAL
             </h2>
             <div className="w-14 h-px bg-white/60 mx-auto mb-6" />
 
@@ -127,28 +132,20 @@ export default function Plans() {
             </div>
 
             <ul className="space-y-4 mb-8 flex-1">
-              {semestralFeatures.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-white text-base sm:text-lg">
+              {anualFeatures.map((item) => (
+                <li
+                  key={item}
+                  className={`flex items-start gap-3 text-white text-base sm:text-lg ${anualFeaturesDestacados.has(item) ? "border-l-2 border-amber-500 pl-3 ml-0.5" : ""}`}
+                >
                   <CheckIcon />
                   <span>{item}</span>
                 </li>
               ))}
             </ul>
 
-            <div className="text-center mb-6">
-              <p className="text-gray-400 text-base">
-                de <span className="line-through">R$359,90</span> por
-              </p>
-              <p className="mt-1">
-                <span className="text-gray-400 text-base">6x de </span>
-                <span className="text-red-500 text-4xl sm:text-5xl font-bold">R$49,64</span>
-              </p>
-              <p className="text-gray-400 text-base mt-1">Ou R$269,90 à vista</p>
-            </div>
-
             <a
               href="#"
-              className="block w-full py-4 bg-red-500 hover:bg-red-600 text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors"
+              className="block w-full py-4 bg-amber-500 hover:bg-amber-600 text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors"
             >
               QUERO FAZER PARTE!
             </a>

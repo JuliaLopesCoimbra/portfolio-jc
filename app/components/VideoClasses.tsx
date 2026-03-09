@@ -3,33 +3,25 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// Definição dos temas e seus vídeos do YouTube (substitua pelos links reais das suas aulas)
+// Temas e vídeos locais (pasta public/videos)
 const temas: Record<string, string> = {
-  "VOLUME DE TREINO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
-  "CICLO DE CARBO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
-  "UNIDADES MOTORAS": "https://www.youtube.com/watch?v=ejwwjL1FiOc",
-  "SUPLEMENTAÇÃO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
-  "FADIGA E DANO MUSCULAR ": "https://www.youtube.com/watch?v=WHmUUDa7reE",
-  "MONTANDO DIETA DO ZERO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
-  "PONTO FRACO": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
-  "FISIOLOGIA HUMANA": "https://www.youtube.com/watch?v=RgKAFK5djSk",
-  
+  "VOLUME DE TREINO": "/videos/volume.mp4",
+  "CICLO DE CARBO": "/videos/volume.mp4",
+  "UNIDADES MOTORAS": "/videos/motoras.mp4",
+  "SUPLEMENTAÇÃO": "/videos/volume.mp4",
+  "FADIGA E DANO MUSCULAR ": "/videos/fadiga.mp4",
+  "MONTANDO DIETA DO ZERO": "/videos/volume.mp4",
+  "PONTO FRACO": "/videos/ponto.mp4",
+  "FISIOLOGIA HUMANA": "/videos/volume.mp4",
 };
 
 export default function VideoClasses() {
-  const [selectedTheme, setSelectedTheme] = useState<string>("Termogênicos");
+  const themeKeys = Object.keys(temas);
+  const [selectedTheme, setSelectedTheme] = useState<string>(themeKeys[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Extrair o ID do vídeo da URL
-  const getYouTubeVideoId = (url: string) => {
-    const match = url.match(/(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/)([^&\n?#]+)/);
-    return match ? match[1] : null;
-  };
-
-  const currentVideoUrl = temas[selectedTheme as keyof typeof temas] || temas["Termogênicos"];
-  const videoId = getYouTubeVideoId(currentVideoUrl);
-  const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : "";
-  const thumbnailUrl = videoId ? `https://img.youtube.com/vi/${videoId}/maxresdefault.jpg` : "/person/joao.jpg";
+  const currentVideoUrl = temas[selectedTheme as keyof typeof temas] ?? Object.values(temas)[0];
+  const isLocalVideo = currentVideoUrl?.startsWith("/videos/");
 
   const handleThemeClick = (theme: string) => {
     setSelectedTheme(theme);
@@ -68,14 +60,14 @@ export default function VideoClasses() {
         <div className="mb-8 space-y-4">
           {/* Primeira linha de botões */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            {["Termogênicos", "Suplementação", "Produção de conteúdo", "Divisões de treino"].map((theme) => (
+            {themeKeys.slice(0, 4).map((theme) => (
               <button
                 key={theme}
                 onClick={() => handleThemeClick(theme)}
                 className={`px-4 py-3 md:px-6 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-300 font-sans ${
                   selectedTheme === theme
-                    ? "bg-red-600 text-white shadow-lg scale-105"
-                    : "bg-[#3a2a1f] text-white border-2 border-red-600 hover:bg-[#4a3a2f]"
+                    ? "bg-amber-600 text-white shadow-lg scale-105"
+                    : "bg-[#3a2a1f] text-white border-2 border-amber-600 hover:bg-[#4a3a2f]"
                 }`}
               >
                 {theme}
@@ -85,14 +77,14 @@ export default function VideoClasses() {
 
           {/* Segunda linha de botões */}
           <div className="flex flex-wrap justify-center gap-3 md:gap-4">
-            {["Nutrient Timing", "Cutting", "Bulking", "Preparação natural de atletas"].map((theme) => (
+            {themeKeys.slice(4, 8).map((theme) => (
               <button
                 key={theme}
                 onClick={() => handleThemeClick(theme)}
                 className={`px-4 py-3 md:px-6 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-300 font-sans ${
                   selectedTheme === theme
-                    ? "bg-red-600 text-white shadow-lg scale-105"
-                    : "bg-[#3a2a1f] text-white border-2 border-red-600 hover:bg-[#4a3a2f]"
+                    ? "bg-amber-600 text-white shadow-lg scale-105"
+                    : "bg-[#3a2a1f] text-white border-2 border-amber-600 hover:bg-[#4a3a2f]"
                 }`}
               >
                 {theme}
@@ -105,41 +97,45 @@ export default function VideoClasses() {
         <div className="flex justify-center mb-8">
           <div className="relative rounded-2xl overflow-hidden bg-black/40 backdrop-blur-sm w-full max-w-5xl">
             <div className="relative aspect-video w-full">
-              {isPlaying && embedUrl ? (
-                <iframe
-                  key={videoId ?? selectedTheme}
-                  src={embedUrl}
-                  className="absolute inset-0 w-full h-full"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                  title={`Aula: ${selectedTheme}`}
-                />
-              ) : (
-                <div key={videoId ?? selectedTheme} className="absolute inset-0">
-                  {/* Video Thumbnail Image */}
-                  <Image
-                    src={thumbnailUrl}
-                    alt={`Thumbnail: ${selectedTheme}`}
-                    fill
-                    className="object-cover"
+              {isLocalVideo ? (
+                isPlaying ? (
+                  <video
+                    key={currentVideoUrl}
+                    src={currentVideoUrl}
+                    className="absolute inset-0 w-full h-full object-contain"
+                    controls
+                    autoPlay
+                    playsInline
+                    title={`Aula: ${selectedTheme}`}
                   />
-                  
-                  {/* Play Button Overlay */}
-                  <button
-                    onClick={() => setIsPlaying(true)}
-                    className="absolute inset-0 flex items-center justify-center group cursor-pointer"
-                  >
-                    {/* Play button amarelo */}
-                    <div className="relative z-10 w-20 h-20 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700 transition-colors shadow-2xl">
-                      <svg
-                        className="w-10 h-10 text-white ml-1"
-                        fill="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path d="M8 5v14l11-7z" />
-                      </svg>
-                    </div>
-                  </button>
+                ) : (
+                  <div key={currentVideoUrl} className="absolute inset-0">
+                    <video
+                      src={currentVideoUrl}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      preload="metadata"
+                      muted
+                      playsInline
+                    />
+                    <button
+                      onClick={() => setIsPlaying(true)}
+                      className="absolute inset-0 flex items-center justify-center group cursor-pointer"
+                    >
+                      <div className="relative z-10 w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors shadow-2xl">
+                        <svg
+                          className="w-10 h-10 text-white ml-1"
+                          fill="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M8 5v14l11-7z" />
+                        </svg>
+                      </div>
+                    </button>
+                  </div>
+                )
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-white">
+                  Vídeo não disponível
                 </div>
               )}
             </div>
@@ -148,7 +144,7 @@ export default function VideoClasses() {
 
         {/* Call to Action Button */}
         <div className="mb-6 flex justify-center">
-          <button className="max-w-xs w-full bg-red-600 hover:bg-red-700 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 shadow-2xl font-sans">
+          <button className="max-w-xs w-full bg-amber-600 hover:bg-amber-700 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 shadow-2xl font-sans">
             QUERO FAZER PARTE!
           </button>
         </div>

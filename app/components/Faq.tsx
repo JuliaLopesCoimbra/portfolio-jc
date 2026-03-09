@@ -1,38 +1,38 @@
 const faqItems = [
   {
-    question: "Sou profissional, serve para mim?",
+    question: "Já atuo na área, o conteúdo é indicado para mim?",
     answer:
-      "Com certeza, dentro da Hypertrophy academy, será passado um conhecimento único, que com certeza vai aumentar seu repertório profissional. O conhecimento servirá tanto para você, quanto para seus alunos ou pacientes.",
+      "Sim. Na Hypertrophy Academy você encontra um conteúdo exclusivo que amplia sua bagagem profissional. O que você aprende vale tanto para sua própria evolução quanto para aplicar com seus alunos ou pacientes.",
   },
   {
-    question: "Como tenho acesso?",
-    answer: "O acesso da área de membros é enviado pelo seu email.",
+    question: "Como faço para acessar o curso?",
+    answer: "O link da área de membros é enviado para o e-mail que você cadastrou na compra.",
   },
   {
-    question: "Quais formas de pagamento?",
+    question: "Quais são as opções de pagamento?",
     answer:
-      "Pix, cartão de crédito ou boleto (vamos ser francos, ninguém usa boleto em 2024)",
+      "Aceitamos Pix, cartão de crédito e boleto (na prática, a maior parte das pessoas usa Pix ou cartão).",
   },
   {
-    question: "Tem garantia?",
-    answer: "Sim, 7 dias de garantia incondicional.",
+    question: "O curso oferece garantia?",
+    answer: "Sim. Você tem 7 dias para testar e, se não gostar, pode pedir reembolso sem precisar justificar.",
   },
   {
-    question: "Porque devo entrar agora?",
+    question: "Qual a vantagem de começar já?",
     answer:
-      "Quanto antes você entrar, mais rápido terá o conhecimento necessário para mudar o seu físico. É uma questão de escolha. Começar a mudar seu físico agora, ou procrastinar isso para sempre?",
+      "Quanto antes você começar, mais cedo terá na mão o que precisa para transformar seu corpo. A decisão é sua: começar a mudar agora ou deixar para depois.",
   },
 ];
 
 export default function Faq() {
   return (
     <section className="relative py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background: escuro com sombras vermelhas à esquerda e à direita */}
+      {/* Background: escuro com sombras douradas à esquerda e à direita */}
       <div
         className="absolute inset-0 bg-black"
         style={{
           background:
-            "radial-gradient(ellipse 50% 80% at 0% 50%, rgba(220, 38, 38, 0.35) 0%, transparent 65%), radial-gradient(ellipse 50% 80% at 100% 50%, rgba(220, 38, 38, 0.35) 0%, transparent 65%), #000",
+            "radial-gradient(ellipse 50% 80% at 0% 50%, rgba(212, 175, 55, 0.35) 0%, transparent 65%), radial-gradient(ellipse 50% 80% at 100% 50%, rgba(212, 175, 55, 0.35) 0%, transparent 65%), #000",
         }}
       />
       {/* Sombra na base para transição suave */}
@@ -46,7 +46,7 @@ export default function Faq() {
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#FF4500] tracking-wide inline drop-shadow-[0_0_12px_rgba(220,38,38,0.5)]">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-amber-500 tracking-wide inline drop-shadow-[0_0_12px_rgba(212,175,55,0.5)]">
             FAQ
           </h2>
           <span className="ml-3 text-xl sm:text-2xl md:text-3xl text-gray-300">
@@ -59,7 +59,7 @@ export default function Faq() {
           {faqItems.map((item, index) => (
             <div
               key={index}
-              className="bg-[#282828]/90 rounded-xl overflow-hidden flex flex-col sm:flex-row border border-white/10 shadow-[0_0_20px_rgba(220,38,38,0.15),0_4px_6px_rgba(0,0,0,0.3)] hover:shadow-[0_0_28px_rgba(220,38,38,0.25),0_4px_6px_rgba(0,0,0,0.3)] transition-shadow duration-300"
+              className="bg-[#282828]/90 rounded-xl overflow-hidden flex flex-col sm:flex-row border border-white/10 shadow-[0_0_20px_rgba(212,175,55,0.15),0_4px_6px_rgba(0,0,0,0.3)] hover:shadow-[0_0_28px_rgba(212,175,55,0.25),0_4px_6px_rgba(0,0,0,0.3)] transition-shadow duration-300"
             >
               {/* Question - left column */}
               <div className="sm:w-[38%] p-7 sm:py-10 sm:pr-6 sm:border-r border-gray-600/50">
@@ -75,6 +75,22 @@ export default function Faq() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Contato */}
+        <div className="mt-16 text-center">
+          <p className="text-gray-300 text-lg mb-4">
+            Quer saber mais? Entre em contato!
+          </p>
+          <a
+            href="https://wa.me/551331502758?text=Quero%20saber%20mais%20sobre%20a%20JC%20Academy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-[#282828]/90 hover:bg-[#333]/90 border border-white/10 rounded-xl px-8 py-5 text-white font-medium text-lg shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_28px_rgba(212,175,55,0.25)] transition-all duration-300"
+          >
+            <span>+55 13 3150-2758</span>
+            <span className="text-gray-400 text-base">Quero saber mais sobre a JC Academy</span>
+          </a>
         </div>
       </div>
     </section>
