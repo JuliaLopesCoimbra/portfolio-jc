@@ -5,14 +5,15 @@ import { useState } from "react";
 
 // Definição dos temas e seus vídeos do YouTube (substitua pelos links reais das suas aulas)
 const temas: Record<string, string> = {
-  "Termogênicos": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
-  "Suplementação": "https://www.youtube.com/watch?v=ejwwjL1FiOc",
-  "Produção de conteúdo": "https://www.youtube.com/watch?v=WHmUUDa7reE",
-  "Divisões de treino": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
-  "Nutrient Timing": "https://www.youtube.com/watch?v=RgKAFK5djSk",
-  "Cutting": "https://www.youtube.com/watch?v=09R8_2nJtjg",
-  "Bulking": "https://www.youtube.com/watch?v=w73EvwawU3Y",
-  "Preparação natural de atletas": "https://www.youtube.com/watch?v=rsv2PqWBAro",
+  "VOLUME DE TREINO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
+  "CICLO DE CARBO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
+  "UNIDADES MOTORAS": "https://www.youtube.com/watch?v=ejwwjL1FiOc",
+  "SUPLEMENTAÇÃO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
+  "FADIGA E DANO MUSCULAR ": "https://www.youtube.com/watch?v=WHmUUDa7reE",
+  "MONTANDO DIETA DO ZERO": "https://www.youtube.com/watch?v=Rq8bFj9_BK0",
+  "PONTO FRACO": "https://www.youtube.com/watch?v=OPf0YbXqDm0",
+  "FISIOLOGIA HUMANA": "https://www.youtube.com/watch?v=RgKAFK5djSk",
+  
 };
 
 export default function VideoClasses() {
