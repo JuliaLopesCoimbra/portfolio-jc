@@ -7,7 +7,7 @@ const instructors = [
     id: 1,
     name: "Caio Padeiro",
     image: "/person/caio.jpeg", // Substitua pela foto de Samuel Meller quando disponível
-    description: "é formado em nutrição, pós-graduado em Bodybuilding Coach, já preparou diversos atletas para competições de federações como WNBF e IFBB. Está se tornando um dos maiores nomes do movimento Science based, produzindo conteúdo com base em evidências tanto no Youtube, quanto no Instagram, tendo, no total, mais de 100 mil seguidores nas redes.",
+    description: "Caio Padeiro dedica-se ao estudo aprofundado da fisiologia muscular e da ciência do treinamento. Seu trabalho é focado na aplicação rigorosa de evidências científicas para otimizar cada variável relacionada a adaptações musculares e hipertrofia.",
   },
   {
     id: 2,

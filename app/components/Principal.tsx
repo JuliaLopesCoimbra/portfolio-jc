@@ -3,14 +3,22 @@ import Image from "next/image";
 export default function Principal() {
   return (
     <section className="relative h-screen flex flex-col justify-end lg:justify-center overflow-hidden">
-      {/* Foto em tela cheia – sem corte, mesma imagem da esquerda à direita */}
-      <div className="absolute inset-0 z-0">
+      {/* Foto em tela cheia – celular: fundocelular; PC: fundonovo */}
+      <div className="absolute inset-0 z-0 md:hidden">
         <Image
-          src="/fundonovo.jpg"
+          src="/fundocelular.png"
           alt=""
           fill
           className="object-cover"
-
+          priority
+        />
+      </div>
+      <div className="absolute inset-0 z-0 hidden md:block">
+        <Image
+          src="/fundonovo.png"
+          alt=""
+          fill
+          className="object-cover"
           priority
         />
       </div>
