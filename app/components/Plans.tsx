@@ -32,8 +32,8 @@ const RocketIcon = () => (
 
 const mensalFeatures = [
   "Acesso à todas as aulas",
-  "3 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
-  "3 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
+  "1 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
+  "1 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
   "Comunidade com alunos",
   "Acesso a Calculadora de Substituições Infinita",
   "Calculadora de Saldo Líquido de Estímulos Semanais",
@@ -42,27 +42,30 @@ const mensalFeatures = [
 
 const anualFeatures = [
   "Acesso à todas as aulas",
-  "3 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
-  "3 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
   "Comunidade com alunos",
   "Acesso a Calculadora de Substituições Infinita",
   "Calculadora de Saldo Líquido de Estímulos Semanais",
   "Lives Quinzenais com João e Caio para tirar dúvidas",
+  "3 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
+  "3 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
   "Ebook: Ciclo de Carboidratos",
   "Ebook: Cutting e Bulking",
   "Ebook: Como montar uma dieta do Zero",
   "Ebook: O melhor exercício para cada músculo: S-Tier",
   "Ebook: Os 3 erros que limitam seu estímulo",
-  "Módulo Bônus: Controlando Variáveis Externas",
+ 
 ];
 
 const anualFeaturesDestacados = new Set([
+  "3 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
+  "3 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
+  "Módulo Bônus: O Universo dos Peptídeos e Canetas Emagrecedoras",
+  "Check In Quinzenal Com dúvidas individuais",
   "Ebook: Ciclo de Carboidratos",
   "Ebook: Cutting e Bulking",
   "Ebook: Como montar uma dieta do Zero", 
   "Ebook: O melhor exercício para cada músculo: S-Tier",
   "Ebook: Os 3 erros que limitam seu estímulo",
-  "Módulo Bônus: Controlando Variáveis Externas",
 ]);
 
 export default function Plans() {
@@ -94,6 +97,9 @@ export default function Plans() {
               ))}
             </ul>
 
+            <p className="text-[#DAA520] font-semibold text-2xl sm:text-3xl text-center mb-3">
+              R$ 65,00 por mês
+            </p>
             <a
               href="#"
               className="block w-full py-4 bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors duration-300"
@@ -135,14 +141,21 @@ export default function Plans() {
               {anualFeatures.map((item) => (
                 <li
                   key={item}
-                  className={`flex items-start gap-3 text-white text-base sm:text-lg ${anualFeaturesDestacados.has(item) ? "border-l-2 border-[#DAA520] pl-3 ml-0.5" : ""}`}
+                  className="flex items-start gap-3 text-white text-base sm:text-lg"
                 >
                   <CheckIcon />
-                  <span>{item}</span>
+                  <span
+                    className={anualFeaturesDestacados.has(item) ? "bg-[#DAA520]/80 px-1.5 py-0.5 rounded-sm" : ""}
+                  >
+                    {item}
+                  </span>
                 </li>
               ))}
             </ul>
 
+            <p className="text-[#DAA520] font-semibold text-2xl sm:text-3xl text-center mb-3">
+              12 x R$ 50,00 por mês
+            </p>
             <a
               href="#"
               className="block w-full py-4 bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors duration-300"

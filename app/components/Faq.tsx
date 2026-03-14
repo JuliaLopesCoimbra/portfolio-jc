@@ -77,7 +77,7 @@ export default function Faq() {
           ))}
         </div>
 
-        {/* Contato */}
+        {/* Contato – abaixo do FAQ */}
         <div className="mt-16 text-center">
           <p className="text-gray-300 text-lg mb-4">
             Quer saber mais? Entre em contato!
@@ -86,10 +86,9 @@ export default function Faq() {
             href="https://wa.me/551331502758?text=Quero%20saber%20mais%20sobre%20a%20JC%20Academy"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 bg-[#282828]/90 hover:bg-[#333]/90 border border-white/10 rounded-xl px-8 py-5 text-white font-medium text-lg shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_28px_rgba(212,175,55,0.25)] transition-all duration-300"
+            className="inline-flex items-center justify-center bg-[#282828]/90 hover:bg-[#333]/90 border border-white/10 rounded-xl px-8 py-5 text-white font-medium text-lg shadow-[0_0_20px_rgba(212,175,55,0.15)] hover:shadow-[0_0_28px_rgba(212,175,55,0.25)] transition-all duration-300"
           >
-            <span>+55 13 3150-2758</span>
-            <span className="text-gray-400 text-base">Quero saber mais sobre a JC Academy</span>
+            Clique aqui para entrar em contato
           </a>
         </div>
       </div>
