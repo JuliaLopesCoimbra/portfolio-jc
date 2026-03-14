@@ -29,7 +29,7 @@ export default function VideoClasses() {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 px-4 bg-black">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-5 md:py-12 px-4 bg-black">
       {/* Background Image com overlay escuro */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -66,8 +66,8 @@ export default function VideoClasses() {
                 onClick={() => handleThemeClick(theme)}
                 className={`px-4 py-3 md:px-6 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-300 font-sans ${
                   selectedTheme === theme
-                    ? "bg-amber-600 text-white shadow-lg scale-105"
-                    : "bg-[#3a2a1f] text-white border-2 border-amber-600 hover:bg-[#4a3a2f]"
+                    ? "bg-[rgb(218,165,32)] text-white shadow-[0_0_20px_rgba(218,165,32,0.5)] scale-105"
+                    : "bg-[#3a2a1f] text-white border-2 border-[#DAA520] hover:bg-[#4a3a2f]"
                 }`}
               >
                 {theme}
@@ -83,8 +83,8 @@ export default function VideoClasses() {
                 onClick={() => handleThemeClick(theme)}
                 className={`px-4 py-3 md:px-6 md:py-4 rounded-lg font-semibold text-sm md:text-base transition-all duration-300 font-sans ${
                   selectedTheme === theme
-                    ? "bg-amber-600 text-white shadow-lg scale-105"
-                    : "bg-[#3a2a1f] text-white border-2 border-amber-600 hover:bg-[#4a3a2f]"
+                    ? "bg-[rgb(218,165,32)] text-white shadow-[0_0_20px_rgba(218,165,32,0.5)] scale-105"
+                    : "bg-[#3a2a1f] text-white border-2 border-[#DAA520] hover:bg-[#4a3a2f]"
                 }`}
               >
                 {theme}
@@ -121,7 +121,7 @@ export default function VideoClasses() {
                       onClick={() => setIsPlaying(true)}
                       className="absolute inset-0 flex items-center justify-center group cursor-pointer"
                     >
-                      <div className="relative z-10 w-20 h-20 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors shadow-2xl">
+                      <div className="relative z-10 w-20 h-20 bg-[rgb(218,165,32)] rounded-full flex items-center justify-center hover:bg-[#C4941A] transition-colors duration-300 shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)]">
                         <svg
                           className="w-10 h-10 text-white ml-1"
                           fill="currentColor"
@@ -144,7 +144,7 @@ export default function VideoClasses() {
 
         {/* Call to Action Button */}
         <div className="mb-6 flex justify-center">
-          <button className="max-w-xs w-full bg-amber-600 hover:bg-amber-700 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 shadow-2xl font-sans">
+          <button className="max-w-xs w-full bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 font-sans">
             QUERO FAZER PARTE!
           </button>
         </div>

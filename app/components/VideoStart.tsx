@@ -20,7 +20,7 @@ export default function VideoStart() {
   const embedUrl = videoId ? `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0` : "";
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-12 px-4 -mt-px">
+    <section className="relative min-h-0 flex items-center justify-center overflow-hidden py-24 md:min-h-screen md:py-12 px-4 mt-8 md:mt-0 md:-mt-px">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -44,14 +44,14 @@ export default function VideoStart() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto" >
         {/* Video Player Section */}
-        <div className="relative bg-black/40 rounded-3xl p-6 md:p-8 mb-6 backdrop-blur-sm ">
+        <div className="relative bg-black/40 rounded-3xl p-5 md:p-8 mb-5 md:mb-6 backdrop-blur-sm ">
           {/* Text and Arrow - Absolute positioned */}
           <div className="absolute left-6 md:left-8 top-6 md:top-8 z-20">
           
           </div>
 
-          {/* Video Player - Full width */}
-          <div className="relative rounded-2xl overflow-hidden bg-black aspect-video w-full">
+          {/* Video Player - Full width; mais alto no mobile (4:3), 16:9 no desktop */}
+          <div className="relative rounded-2xl overflow-hidden bg-black aspect-[4/3] md:aspect-video w-full">
             {isPlaying && embedUrl ? (
               <iframe
                 src={embedUrl}
@@ -78,11 +78,11 @@ export default function VideoStart() {
                   className="absolute inset-0 flex items-center justify-center group cursor-pointer"
                 >
                   {/* Concentric rings */}
-                  <div className="absolute w-20 h-20 rounded-full border-4 border-amber-600 animate-ping opacity-75"></div>
-                  <div className="absolute w-20 h-20 rounded-full border-4 border-amber-600"></div>
+                  <div className="absolute w-20 h-20 rounded-full border-4 border-[#DAA520] animate-ping opacity-75"></div>
+                  <div className="absolute w-20 h-20 rounded-full border-4 border-[#DAA520]"></div>
                   
                   {/* Play button */}
-                  <div className="relative z-10 w-16 h-16 bg-amber-600 rounded-full flex items-center justify-center hover:bg-amber-700 transition-colors shadow-2xl">
+                  <div className="relative z-10 w-16 h-16 bg-[rgb(218,165,32)] rounded-full flex items-center justify-center hover:bg-[#C4941A] transition-colors duration-300 shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)]">
                     <svg
                       className="w-6 h-6 text-white ml-1"
                       fill="currentColor"
@@ -98,14 +98,13 @@ export default function VideoStart() {
         </div>
 
         {/* Call to Action Button */}
-        <div className="mb-8">
-          <button className="w-full bg-amber-600 hover:bg-amber-700 text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 shadow-2xl font-sans">
-            QUERO FAZER PARTE!
+        <div className="mb-6 md:mb-8">
+        <button className="w-full bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 font-sans">            QUERO FAZER PARTE!
           </button>
         </div>
 
         {/* Security Information */}
-        <div className="flex flex-wrap justify-center gap-6 md:gap-8 text-white">
+        <div className="flex flex-wrap justify-center gap-5 md:gap-8 text-white">
           {/* Compra segura */}
           <div className="flex items-center gap-2">
             <svg

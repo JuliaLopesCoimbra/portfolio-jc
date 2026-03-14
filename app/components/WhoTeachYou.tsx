@@ -42,7 +42,7 @@ export default function WhoTeachYou() {
             {instructors.map((instructor) => (
               <div
                 key={instructor.id}
-                className="relative rounded-2xl overflow-hidden border-2 border-amber-600/50 bg-black/40 backdrop-blur-sm"
+                className="relative rounded-2xl overflow-hidden border-1 border-[#DAA520] bg-black/40 backdrop-blur-sm shadow-[0_0_25px_rgba(218,165,32,0.4)]"
               >
                 {/* Card Content */}
                 <div className="relative">
@@ -52,7 +52,7 @@ export default function WhoTeachYou() {
                     <div 
                       className="absolute inset-0"
                       style={{
-                        background: "radial-gradient(circle at center, rgba(202, 138, 4, 0.4) 0%, rgba(202, 138, 4, 0.2) 40%, transparent 70%)",
+                        background: "radial-gradient(circle at center, rgba(218, 165, 32, 0.4) 0%, rgba(218, 165, 32, 0.2) 40%, transparent 70%)",
                         filter: "blur(40px)",
                       }}
                     />
@@ -73,7 +73,7 @@ export default function WhoTeachYou() {
                       <div 
                         className="absolute inset-0"
                         style={{
-                          background: "linear-gradient(to bottom, transparent 0%, rgba(202, 138, 4, 0.2) 50%, rgba(202, 138, 4, 0.4) 100%)",
+                          background: "linear-gradient(to bottom, transparent 0%, rgba(218, 165, 32, 0.2) 50%, rgba(218, 165, 32, 0.4) 100%)",
                         }}
                       />
                     </div>
@@ -82,7 +82,7 @@ export default function WhoTeachYou() {
                   {/* Text Content */}
                   <div className="p-6 md:p-8 bg-black/60">
                     {/* Name */}
-                    <h3 className="text-2xl md:text-3xl font-bold text-amber-600 mb-4 font-sans">
+                    <h3 className="text-2xl md:text-3xl font-bold text-[#DAA520] mb-4 font-sans">
                       {instructor.name}
                     </h3>
                     

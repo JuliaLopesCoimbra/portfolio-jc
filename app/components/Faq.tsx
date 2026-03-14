@@ -46,7 +46,7 @@ export default function Faq() {
       <div className="relative z-10 max-w-5xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-amber-500 tracking-wide inline drop-shadow-[0_0_12px_rgba(212,175,55,0.5)]">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#DAA520] tracking-wide inline drop-shadow-[0_0_12px_rgba(218,165,32,0.5)]">
             FAQ
           </h2>
           <span className="ml-3 text-xl sm:text-2xl md:text-3xl text-gray-300">

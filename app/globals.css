@@ -27,7 +27,7 @@ body {
 /* Scrollbar personalizado - dourado */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #d4af37 #2b1818;
+  scrollbar-color: #ffbb00 #2b1818;
 }
 
 *::-webkit-scrollbar {
@@ -41,13 +41,13 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background: #d4af37;
+  background: #d87708;
   border-radius: 10px;
   border: 2px solid #2b1818;
 }
 
 *::-webkit-scrollbar-thumb:hover {
-  background: #b8860b;
+  background: #da7501;
 }
 
 *::-webkit-scrollbar-corner {

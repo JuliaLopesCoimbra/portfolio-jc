@@ -6,16 +6,17 @@ export default function Principal() {
       {/* Foto em tela cheia – celular: fundocelular; PC: fundonovo */}
       <div className="absolute inset-0 z-0 md:hidden">
         <Image
-          src="/fundocelular.png"
+          src="/kk.png"
           alt=""
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
+          sizes="100vw"
         />
       </div>
       <div className="absolute inset-0 z-0 hidden md:block">
         <Image
-          src="/fundonovo.png"
+          src="/fundo.png"
           alt=""
           fill
           className="object-cover"
@@ -38,10 +39,10 @@ export default function Principal() {
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight font-sans drop-shadow-md">
           Tenha acesso a uma plataforma completa de treino e alimentação voltada para hipertrofia, ideal para quem quer{" "}
-            <span className="text-amber-500"> resultados reais.</span>
+            <span className="text-[#DAA520] drop-shadow-[0_0_12px_rgba(218,165,32,0.5)]"> resultados reais.</span>
           </h1>
           <p className="text-base sm:text-lg text-gray-200 mt-3 font-sans drop-shadow-md">
-            Na <span className="font-bold text-amber-500">JC Academy</span> está reunido o conhecimento que já levou centenas de pessoas, inclusive atletas, a conquistarem um físico melhor.
+            Na <span className="font-bold text-[#DAA520] drop-shadow-[0_0_12px_rgba(218,165,32,0.5)]">JC Academy</span> está reunido o conhecimento que já levou centenas de pessoas, inclusive atletas, a conquistarem um físico melhor.
          
           </p>
         </div>
@@ -58,7 +59,7 @@ export default function Principal() {
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="text-amber-500 drop-shadow-lg"
+          className="text-[#DAA520] drop-shadow-[0_0_12px_rgba(218,165,32,0.5)]"
         >
           <path
             d="M12 5v14M5 12l7 7 7-7"
