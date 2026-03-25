@@ -7,7 +7,7 @@ const instructors = [
     id: 1,
     name: "Caio Padeiro",
     image: "/person/caio.jpeg", // Substitua pela foto de Samuel Meller quando disponível
-    description: "Caio Padeiro dedica-se ao estudo aprofundado da fisiologia muscular e da ciência do treinamento. Seu trabalho é focado na aplicação rigorosa de evidências científicas para otimizar cada variável relacionada a adaptações musculares e hipertrofia.",
+    description: "Caio Padeiro atua como educador na área de hipertrofia muscular e ciência do treinamento, dedicando-se ao estudo aprofundado dos mecanismos fisiológicos que regulam as adaptações musculares ao exercício resistido. Seu trabalho é centrado na análise crítica de evidências científicas, incluindo temas quem regem os mecanismos fisiológicos e adaptações neuromusculares. A partir dessa base teórica, desenvolve estratégias práticas que permitem transformar conceitos científicos complexos em protocolos de treinamento aplicáveis e eficientes, com abordagens diretas e objetivas. Ao integrar conhecimento fisiológico, biomecânico e metodológico com experiência prática no treinamento de seus alunos, Caio construiu uma abordagem estruturada que prioriza progressão inteligente, controle de variáveis relevantes e tomada de decisão orientada por feedbacks. Seu objetivo é capacitar praticantes a compreenderem profundamente como e por que o músculo cresce, tornando-os mais estratégicos, independentes e consistentes na busca por resultados de composição corporal. Seus materiais educacionais são voltados para quem deseja ir além de rotinas genéricas, aprendendo a interpretar a ciência e aplicá-la de forma racional, sustentável e mensurável no próprio treino.",
   },
   {
     id: 2,

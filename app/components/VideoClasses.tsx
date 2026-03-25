@@ -3,16 +3,16 @@
 import Image from "next/image";
 import { useState } from "react";
 
-// Temas e vídeos locais (pasta public/videos)
+// Temas e vídeos locais/YouTube
 const temas: Record<string, string> = {
-  "VOLUME DE TREINO": "/videos/volume.mp4",
-  "CICLO DE CARBO": "/videos/volume.mp4",
-  "UNIDADES MOTORAS": "/videos/motoras.mp4",
-  "SUPLEMENTAÇÃO": "/videos/volume.mp4",
-  "FADIGA E DANO MUSCULAR ": "/videos/fadiga.mp4",
-  "MONTANDO DIETA DO ZERO": "/videos/volume.mp4",
-  "PONTO FRACO": "/videos/ponto.mp4",
-  "FISIOLOGIA HUMANA": "/videos/volume.mp4",
+  "VOLUME DE TREINO": "https://www.youtube.com/watch?v=_aHESllVl0s",
+  "CICLO DE CARBO": "",
+  "UNIDADES MOTORAS": "https://www.youtube.com/watch?v=egVH1AG1zcM",
+  "SUPLEMENTAÇÃO": "",
+  "FADIGA E DANO MUSCULAR ": "https://www.youtube.com/watch?v=1-f3QxSG_Ow",
+  "MONTANDO DIETA DO ZERO": "",
+  "PONTO FRACO": "https://www.youtube.com/watch?v=RdEMSwdQFmg",
+  "FISIOLOGIA HUMANA": "",
 };
 
 export default function VideoClasses() {
@@ -20,8 +20,24 @@ export default function VideoClasses() {
   const [selectedTheme, setSelectedTheme] = useState<string>(themeKeys[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
+  const getYouTubeEmbedUrl = (url: string) => {
+    try {
+      const parsedUrl = new URL(url);
+      const isShortUrl = parsedUrl.hostname.includes("youtu.be");
+      const videoId = isShortUrl
+        ? parsedUrl.pathname.slice(1)
+        : parsedUrl.searchParams.get("v");
+
+      return videoId ? `https://www.youtube.com/embed/${videoId}` : null;
+    } catch {
+      return null;
+    }
+  };
+
   const currentVideoUrl = temas[selectedTheme as keyof typeof temas] ?? Object.values(temas)[0];
   const isLocalVideo = currentVideoUrl?.startsWith("/videos/");
+  const youtubeEmbedUrl = getYouTubeEmbedUrl(currentVideoUrl);
+  const isYouTubeVideo = Boolean(youtubeEmbedUrl);
 
   const handleThemeClick = (theme: string) => {
     setSelectedTheme(theme);
@@ -133,6 +149,16 @@ export default function VideoClasses() {
                     </button>
                   </div>
                 )
+              ) : isYouTubeVideo ? (
+                <iframe
+                  key={currentVideoUrl}
+                  src={youtubeEmbedUrl ?? undefined}
+                  className="absolute inset-0 w-full h-full"
+                  title={`Aula: ${selectedTheme}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
               ) : (
                 <div className="absolute inset-0 flex items-center justify-center bg-black/40 text-white">
                   Vídeo não disponível
