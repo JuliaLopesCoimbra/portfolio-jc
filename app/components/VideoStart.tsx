@@ -44,7 +44,7 @@ export default function VideoStart() {
       {/* Content */}
       <div className="relative z-10 w-full max-w-4xl mx-auto" >
         {/* Video Player Section */}
-        <div className="relative bg-black/40 rounded-3xl p-5 md:p-8 mb-5 md:mb-6 backdrop-blur-sm ">
+        <div className="relative bg-black/40 rounded-3xl p-5 md:p-8 mb-5 md:mb-6 backdrop-blur-sm border border-[#DAA520] shadow-[0_0_25px_rgba(218,165,32,0.4)]">
           {/* Text and Arrow - Absolute positioned */}
           <div className="absolute left-6 md:left-8 top-6 md:top-8 z-20">
           

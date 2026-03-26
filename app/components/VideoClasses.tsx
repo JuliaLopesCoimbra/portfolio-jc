@@ -111,7 +111,7 @@ export default function VideoClasses() {
 
         {/* Vídeo centralizado - grande na tela */}
         <div className="flex justify-center mb-8">
-          <div className="relative rounded-2xl overflow-hidden bg-black/40 backdrop-blur-sm w-full max-w-5xl">
+          <div className="relative rounded-2xl overflow-hidden bg-black/40 backdrop-blur-sm w-full max-w-5xl border border-[#DAA520] shadow-[0_0_25px_rgba(218,165,32,0.4)]">
             <div className="relative aspect-video w-full">
               {isLocalVideo ? (
                 isPlaying ? (

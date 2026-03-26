@@ -1,5 +1,12 @@
 "use client";
 
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+});
+
 const CheckIcon = () => (
   <svg className="w-5 h-5 shrink-0 text-[#DAA520]" fill="currentColor" viewBox="0 0 20 20">
     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
@@ -14,6 +21,12 @@ const LightningIcon = () => (
 
 const LockIcon = () => (
   <svg className="w-5 h-5 text-[#DAA520]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+  </svg>
+);
+
+const MiniLockIcon = () => (
+  <svg className="w-4 h-4 shrink-0 text-[#DAA520] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
   </svg>
 );
@@ -70,7 +83,7 @@ const anualFeaturesDestacados = new Set([
 
 export default function Plans() {
   return (
-    <section className="relative min-h-screen py-16 px-4 overflow-hidden bg-black">
+    <section className={`${poppins.className} relative min-h-screen py-16 px-4 overflow-hidden bg-black`}>
 
       <div className="relative z-10 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-0 border border-white/20 rounded-lg overflow-hidden bg-black/40">
@@ -97,8 +110,13 @@ export default function Plans() {
               ))}
             </ul>
 
-            <p className="text-[#DAA520] font-semibold text-2xl sm:text-3xl text-center mb-3">
-              R$ 65,00 por mês
+            <p
+              className="text-[#DAA520] text-center mb-3 leading-none tracking-normal"
+              style={{ fontFamily: '"Trebuchet MS", "Segoe UI", sans-serif' }}
+            >
+              <span className="font-bold text-5xl sm:text-6xl">R$</span>
+              <span className="font-bold text-5xl sm:text-6xl">65,00</span>
+              <span className="text-lg sm:text-xl ml-2">/mês</span>
             </p>
             <a
               href="#"
@@ -143,9 +161,9 @@ export default function Plans() {
                   key={item}
                   className="flex items-start gap-3 text-white text-base sm:text-lg"
                 >
-                  <CheckIcon />
+                  {anualFeaturesDestacados.has(item) ? <MiniLockIcon /> : <CheckIcon />}
                   <span
-                    className={anualFeaturesDestacados.has(item) ? "bg-[#DAA520]/80 px-1.5 py-0.5 rounded-sm" : ""}
+                    className={anualFeaturesDestacados.has(item) ? "text-white font-extrabold" : ""}
                   >
                     {item}
                   </span>
@@ -153,8 +171,14 @@ export default function Plans() {
               ))}
             </ul>
 
-            <p className="text-[#DAA520] font-semibold text-2xl sm:text-3xl text-center mb-3">
-              12 x R$ 50,00 por mês
+            <p
+              className="bg-gradient-to-r from-[#FFF1B8] via-[#DAA520] to-[#F7D774] bg-clip-text text-transparent text-center mb-3 leading-none tracking-normal"
+              style={{ fontFamily: '"Trebuchet MS", "Segoe UI", sans-serif' }}
+            >
+              <span className="text-lg sm:text-xl mr-2">12x de</span>
+              <span className="font-bold text-5xl sm:text-6xl">R$</span>
+              <span className="font-bold text-5xl sm:text-6xl">50,00</span>
+              <span className="text-lg sm:text-xl ml-2">/mês</span>
             </p>
             <a
               href="#"
