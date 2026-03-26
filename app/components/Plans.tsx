@@ -89,17 +89,15 @@ export default function Plans() {
         <div className="grid md:grid-cols-2 gap-0 border border-white/20 rounded-lg overflow-hidden bg-black/40">
           {/* Coluna MENSAL */}
           <div className="flex flex-col p-10 md:p-12 border-r border-white/30">
-            <h2 className="text-white text-center text-xl sm:text-2xl font-semibold tracking-wider uppercase mb-5">
+            <h2
+              className="text-[#DAA520] text-center text-5xl sm:text-6xl font-bold uppercase mb-5 leading-none tracking-normal"
+              style={{ fontFamily: '"Trebuchet MS", "Segoe UI", sans-serif' }}
+            >
               MENSAL
             </h2>
             <div className="w-14 h-px bg-[#DAA520]/80 mx-auto mb-6" />
 
-            <div className="flex items-center gap-2 mb-8">
-              <LightningIcon />
-              <span className="text-white text-base sm:text-lg font-medium tracking-wider uppercase">
-                HYPER TROPHY BRASIL
-              </span>
-            </div>
+           
 
             <ul className="space-y-4 mb-8 flex-1">
               {mensalFeatures.map((item) => (
@@ -115,7 +113,7 @@ export default function Plans() {
               style={{ fontFamily: '"Trebuchet MS", "Segoe UI", sans-serif' }}
             >
               <span className="font-bold text-5xl sm:text-6xl">R$</span>
-              <span className="font-bold text-5xl sm:text-6xl">65,00</span>
+              <span className="font-bold text-5xl sm:text-6xl">70,00</span>
               <span className="text-lg sm:text-xl ml-2">/mês</span>
             </p>
             <a
@@ -143,17 +141,15 @@ export default function Plans() {
 
           {/* Coluna ANUAL */}
           <div className="flex flex-col p-10 md:p-12">
-            <h2 className="text-white text-center text-xl sm:text-2xl font-semibold tracking-wider uppercase mb-5">
+            <h2
+              className="text-[#DAA520] text-center text-5xl sm:text-6xl font-bold uppercase mb-5 leading-none tracking-normal"
+              style={{ fontFamily: '"Trebuchet MS", "Segoe UI", sans-serif' }}
+            >
               ANUAL
             </h2>
             <div className="w-14 h-px bg-[#DAA520]/80 mx-auto mb-6" />
 
-            <div className="flex items-center gap-2 mb-8">
-              <LightningIcon />
-              <span className="text-white text-base sm:text-lg font-medium tracking-wider uppercase">
-                HYPER TROPHY BRASIL
-              </span>
-            </div>
+         
 
             <ul className="space-y-4 mb-8 flex-1">
               {anualFeatures.map((item) => (

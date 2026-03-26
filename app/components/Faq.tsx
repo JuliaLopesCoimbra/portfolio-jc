@@ -2,7 +2,7 @@ const faqItems = [
   {
     question: "Já atuo na área, o conteúdo é indicado para mim?",
     answer:
-      "Sim. Na Hypertrophy Academy você encontra um conteúdo exclusivo que amplia sua bagagem profissional. O que você aprende vale tanto para sua própria evolução quanto para aplicar com seus alunos ou pacientes.",
+      "Sim. Na JC Academy você encontra um conteúdo exclusivo que amplia sua bagagem profissional. O que você aprende vale tanto para sua própria evolução quanto para aplicar com seus alunos ou pacientes.",
   },
   {
     question: "Como faço para acessar o curso?",
@@ -11,7 +11,7 @@ const faqItems = [
   {
     question: "Quais são as opções de pagamento?",
     answer:
-      "Aceitamos Pix, cartão de crédito e boleto (na prática, a maior parte das pessoas usa Pix ou cartão).",
+      "Aceitamos Pix e cartão de crédito (na prática, a maior parte das pessoas usa Pix ou cartão).",
   },
   {
     question: "O curso oferece garantia?",
