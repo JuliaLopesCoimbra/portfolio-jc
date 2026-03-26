@@ -99,8 +99,12 @@ export default function VideoStart() {
 
         {/* Call to Action Button */}
         <div className="mb-6 md:mb-8">
-        <button className="w-full bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 font-sans">            QUERO FAZER PARTE!
-          </button>
+          <a
+            href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104"
+            className="block w-full bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white font-bold text-lg md:text-xl py-4 px-8 rounded-xl transition-colors duration-300 font-sans text-center"
+          >
+            QUERO FAZER PARTE!
+          </a>
         </div>
 
         {/* Security Information */}

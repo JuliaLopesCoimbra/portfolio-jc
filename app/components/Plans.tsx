@@ -117,7 +117,7 @@ export default function Plans() {
               <span className="text-lg sm:text-xl ml-2">/mês</span>
             </p>
             <a
-              href="#"
+              href="https://pay.ginastee.com/ck-6u6igb1?plan=110000106"
               className="block w-full py-4 bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors duration-300"
             >
               QUERO FAZER PARTE!
@@ -177,7 +177,7 @@ export default function Plans() {
               <span className="text-lg sm:text-xl ml-2">/mês</span>
             </p>
             <a
-              href="#"
+              href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104"
               className="block w-full py-4 bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors duration-300"
             >
               QUERO FAZER PARTE!
