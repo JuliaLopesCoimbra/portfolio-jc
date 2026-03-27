@@ -5,14 +5,16 @@ import { useState } from "react";
 
 // Temas e vídeos locais/YouTube
 const temas: Record<string, string> = {
-  "VOLUME DE TREINO": "https://www.youtube.com/watch?v=_aHESllVl0s",
-  "CICLO DE CARBO": "https://www.youtube.com/watch?v=EHEYWruJP1Q",
-  "UNIDADES MOTORAS": "https://www.youtube.com/watch?v=egVH1AG1zcM",
   "SUPLEMENTAÇÃO": "https://www.youtube.com/watch?v=PXYcpoyMWbQ",
+  "VOLUME DE TREINO": "https://www.youtube.com/watch?v=_aHESllVl0s",
+  "CANETAS EMAGRECEDORAS": "https://youtu.be/CFCYhxzLpqo",
+  "UNIDADES MOTORAS": "https://www.youtube.com/watch?v=egVH1AG1zcM",
+
+  "PEPTÍDEOS": "https://youtu.be/kxYxKSzL8PQ",
   "FADIGA E DANO MUSCULAR ": "https://www.youtube.com/watch?v=1-f3QxSG_Ow",
-  "MONTANDO DIETA DO ZERO": "https://www.youtube.com/watch?v=kaSntfg-UdE",
+  "CICLO DE CARBO": "https://www.youtube.com/watch?v=EHEYWruJP1Q",
   "PONTO FRACO": "https://www.youtube.com/watch?v=RdEMSwdQFmg",
-  "FISIOLOGIA HUMANA": "https://www.youtube.com/watch?v=TkZxVncmld8",
+  
 };
 
 export default function VideoClasses() {

@@ -45,10 +45,10 @@ const RocketIcon = () => (
 
 const mensalFeatures = [
   "Acesso à todas as aulas",
-  "1 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
-  "1 Modelos de Treino Feminina (As 3 divisões mais otimizadas atualmente)",
+  "1 Modelo de Treino Masculino (As 3 divisões mais otimizadas atualmente)",
+  "1 Modelo de Treino Feminino (As 3 divisões mais otimizadas atualmente)",
   "Comunidade com alunos",
-  "Acesso a Calculadora de Substituições Infinita",
+  "Acesso à Calculadora de Substituições Infinita",
   "Calculadora de Saldo Líquido de Estímulos Semanais",
   "Lives Quinzenais com João e Caio para tirar dúvidas",
 ];
@@ -56,7 +56,7 @@ const mensalFeatures = [
 const anualFeatures = [
   "Acesso à todas as aulas",
   "Comunidade com alunos",
-  "Acesso a Calculadora de Substituições Infinita",
+  "Acesso à Calculadora de Substituições Infinita",
   "Calculadora de Saldo Líquido de Estímulos Semanais",
   "Lives Quinzenais com João e Caio para tirar dúvidas",
   "3 Modelos de Treino Masculina (As 3 divisões mais otimizadas atualmente)",
