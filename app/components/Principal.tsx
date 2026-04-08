@@ -36,7 +36,7 @@ export default function Principal() {
 
       {/* Esquerda - Texto sobre a foto (overlay leve só para legibilidade) */}
       <div className="relative z-10 order-2 lg:order-1 flex flex-col justify-center w-full lg:w-1/2 px-4 sm:px-6 lg:px-12 py-8">
-        <div className="max-w-xl mx-auto lg:mx-0 text-center lg:text-left space-y-4">
+        <div className="relative max-w-xl mx-auto lg:mx-0 text-center lg:text-left space-y-4">
           <div className="flex justify-center lg:justify-start mb-3">
             <Image
               src="/logo_academy.png"
@@ -55,14 +55,14 @@ export default function Principal() {
             Na <span className="font-bold text-[#DAA520] drop-shadow-[0_0_12px_rgba(218,165,32,0.5)]">JC Academy</span> está reunido o conhecimento que já levou centenas de pessoas, inclusive atletas, a conquistarem um físico melhor.
          
           </p>
-          <a
-            href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104&disablePlanChoice=true"
-            className="hidden lg:inline-flex items-center justify-center rounded-md bg-[rgb(218,165,32)] px-6 py-4 text-base font-medium text-white shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-[#C4941A]"
-          >
-            Quero entrar AGORA para a JC pagando{" "}
-            <span className="font-extrabold">&nbsp;R$1,66/dia</span>
-          </a>
         </div>
+        <a
+          href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104&disablePlanChoice=true"
+          className="hidden lg:inline-flex lg:absolute lg:left-12 lg:top-[calc(100%+1.5rem)] items-center justify-center rounded-md bg-[rgb(218,165,32)] px-6 py-4 text-base font-medium text-white shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-[#C4941A]"
+        >
+          Quero entrar AGORA para a JC pagando{" "}
+          <span className="font-extrabold">&nbsp;R$1,66/dia</span>
+        </a>
       </div>
 
       <div className="order-3 flex justify-center px-4 pt-2 lg:hidden z-20">
