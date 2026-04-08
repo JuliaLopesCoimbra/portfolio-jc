@@ -7,7 +7,7 @@ export default function VideoStart() {
   const [isPlaying, setIsPlaying] = useState(false);
   
   // URL do vídeo do YouTube (pode ser alterada)
-  const youtubeVideoUrl = "https://www.youtube.com/watch?v=ejwwjL1FiOc";
+  const youtubeVideoUrl = "https://youtu.be/JTAnI3QdMjI";
 
   // Extrair o ID do vídeo da URL
   const getYouTubeVideoId = (url: string) => {

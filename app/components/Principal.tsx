@@ -55,12 +55,29 @@ export default function Principal() {
             Na <span className="font-bold text-[#DAA520] drop-shadow-[0_0_12px_rgba(218,165,32,0.5)]">JC Academy</span> está reunido o conhecimento que já levou centenas de pessoas, inclusive atletas, a conquistarem um físico melhor.
          
           </p>
+          <a
+            href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104&disablePlanChoice=true"
+            className="hidden lg:inline-flex items-center justify-center rounded-md bg-[rgb(218,165,32)] px-6 py-4 text-base font-medium text-white shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-[#C4941A]"
+          >
+            Quero entrar AGORA para a JC pagando{" "}
+            <span className="font-extrabold">&nbsp;R$1,66/dia</span>
+          </a>
         </div>
+      </div>
+
+      <div className="order-3 flex justify-center px-4 pt-2 lg:hidden z-20">
+        <a
+          href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104&disablePlanChoice=true"
+          className="inline-flex max-w-md items-center justify-center rounded-md bg-[rgb(218,165,32)] px-5 py-4 text-center text-sm font-medium text-white shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-[#C4941A]"
+        >
+          Quero entrar AGORA para a JC pagando{" "}
+          <span className="font-extrabold">&nbsp;R$1,66/dia</span>
+        </a>
       </div>
 
       {/* Seta: no mobile fica abaixo do texto (order-3); no PC fica fixa centralizada no rodapé */}
       <div
-        className="order-3 flex justify-center pt-6 lg:order-none lg:pt-0 lg:absolute lg:bottom-8 lg:left-1/2 lg:-translate-x-1/2 z-20 animate-bounce"
+        className="order-4 flex justify-center pt-6 lg:order-none lg:pt-0 lg:absolute lg:bottom-8 lg:left-1/2 lg:-translate-x-1/2 z-20 animate-bounce"
         aria-hidden
       >
         <svg
