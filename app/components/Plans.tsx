@@ -13,20 +13,16 @@ const CheckIcon = () => (
   </svg>
 );
 
+/*
 const LightningIcon = () => (
   <svg className="w-7 h-7 shrink-0 text-[#DAA520]" fill="currentColor" viewBox="0 0 24 24">
     <path d="M13 2L4 14h7l-2 8 9-12h-7l2-8z" />
   </svg>
 );
+*/
 
 const LockIcon = () => (
   <svg className="w-5 h-5 text-[#DAA520]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-  </svg>
-);
-
-const MiniLockIcon = () => (
-  <svg className="w-4 h-4 shrink-0 text-[#DAA520] mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
   </svg>
 );
@@ -43,6 +39,7 @@ const RocketIcon = () => (
   </svg>
 );
 
+/*
 const mensalFeatures = [
   "Acesso à todas as aulas",
   "1 Modelo de Treino Masculino (As 3 divisões mais otimizadas atualmente)",
@@ -52,6 +49,7 @@ const mensalFeatures = [
   "Calculadora de Saldo Líquido de Estímulos Semanais",
   "Lives Quinzenais com João e Caio para tirar dúvidas",
 ];
+*/
 
 const anualFeatures = [
   "Acesso à todas as aulas",
@@ -85,9 +83,9 @@ export default function Plans() {
   return (
     <section className={`${poppins.className} relative min-h-screen py-16 px-4 overflow-hidden bg-black`}>
 
-      <div className="relative z-10 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-0 border border-white/20 rounded-lg overflow-hidden bg-black/40">
-          {/* Coluna MENSAL */}
+      <div className="relative z-10 mx-auto w-full max-w-4xl">
+        <div className="mx-auto w-full max-w-3xl border border-white/20 rounded-lg overflow-hidden bg-black/40">
+          {/* Coluna MENSAL
           <div className="flex flex-col p-10 md:p-12 border-r border-white/30">
             <h2
               className="text-[#DAA520] text-center text-5xl sm:text-6xl font-bold uppercase mb-5 leading-none tracking-normal"
@@ -96,8 +94,6 @@ export default function Plans() {
               MENSAL
             </h2>
             <div className="w-14 h-px bg-[#DAA520]/80 mx-auto mb-6" />
-
-           
 
             <ul className="space-y-4 mb-8 flex-1">
               {mensalFeatures.map((item) => (
@@ -138,6 +134,7 @@ export default function Plans() {
               </div>
             </div>
           </div>
+          */}
 
           {/* Coluna ANUAL */}
           <div className="flex flex-col p-10 md:p-12">
@@ -157,7 +154,7 @@ export default function Plans() {
                   key={item}
                   className="flex items-start gap-3 text-white text-base sm:text-lg"
                 >
-                  {anualFeaturesDestacados.has(item) ? <MiniLockIcon /> : <CheckIcon />}
+                  <CheckIcon />
                   <span
                     className={anualFeaturesDestacados.has(item) ? "text-white font-extrabold" : ""}
                   >
@@ -177,7 +174,7 @@ export default function Plans() {
               <span className="text-lg sm:text-xl ml-2">/mês</span>
             </p>
             <a
-              href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104"
+              href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104&disablePlanChoice=true"
               className="block w-full py-4 bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors duration-300"
             >
               QUERO FAZER PARTE!
