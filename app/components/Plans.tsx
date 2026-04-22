@@ -39,18 +39,6 @@ const RocketIcon = () => (
   </svg>
 );
 
-/*
-const mensalFeatures = [
-  "Acesso à todas as aulas",
-  "1 Modelo de Treino Masculino (As 3 divisões mais otimizadas atualmente)",
-  "1 Modelo de Treino Feminino (As 3 divisões mais otimizadas atualmente)",
-  "Comunidade com alunos",
-  "Acesso à Calculadora de Substituições Infinita",
-  "Calculadora de Saldo Líquido de Estímulos Semanais",
-  "Lives Quinzenais com João e Caio para tirar dúvidas",
-];
-*/
-
 const anualFeatures = [
   "Acesso à todas as aulas",
   "Comunidade com alunos",
@@ -79,14 +67,20 @@ const anualFeaturesDestacados = new Set([
   "Ebook: Os 3 erros que limitam seu estímulo",
 ]);
 
+const mensalFeatures = [
+  "Acesso aos módulos de NUTRIÇÃO E TREINAMENTO",
+  ...anualFeatures.filter(
+    (item) => item !== anualFeatures[0] && !anualFeaturesDestacados.has(item)
+  ),
+];
+
 export default function Plans() {
   return (
     <section className={`${poppins.className} relative min-h-screen py-16 px-4 overflow-hidden bg-black`}>
 
       <div className="relative z-10 mx-auto w-full max-w-4xl">
-        <div className="mx-auto w-full max-w-3xl border border-white/20 rounded-lg overflow-hidden bg-black/40">
-          {/* Coluna MENSAL
-          <div className="flex flex-col p-10 md:p-12 border-r border-white/30">
+        <div className="mx-auto grid w-full max-w-5xl overflow-hidden rounded-lg border border-white/20 bg-black/40 md:grid-cols-2">
+          <div className="flex flex-col p-10 md:border-r md:border-white/30 md:p-12">
             <h2
               className="text-[#DAA520] text-center text-5xl sm:text-6xl font-bold uppercase mb-5 leading-none tracking-normal"
               style={{ fontFamily: '"Trebuchet MS", "Segoe UI", sans-serif' }}
@@ -109,11 +103,11 @@ export default function Plans() {
               style={{ fontFamily: '"Trebuchet MS", "Segoe UI", sans-serif' }}
             >
               <span className="font-bold text-5xl sm:text-6xl">R$</span>
-              <span className="font-bold text-5xl sm:text-6xl">70,00</span>
+              <span className="font-bold text-5xl sm:text-6xl">75,90</span>
               <span className="text-lg sm:text-xl ml-2">/mês</span>
             </p>
             <a
-              href="https://pay.ginastee.com/ck-6u6igb1?plan=110000106"
+              href="https://pay.ginastee.com/ck-6u6igb1?plan=110000209&disablePlanChoice=true"
               className="block w-full py-4 bg-[rgb(218,165,32)] shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] hover:bg-[#C4941A] text-white text-center font-bold text-base sm:text-lg tracking-wider uppercase rounded transition-colors duration-300"
             >
               QUERO FAZER PARTE!
@@ -134,7 +128,6 @@ export default function Plans() {
               </div>
             </div>
           </div>
-          */}
 
           {/* Coluna ANUAL */}
           <div className="flex flex-col p-10 md:p-12">

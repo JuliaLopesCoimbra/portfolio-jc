@@ -57,7 +57,7 @@ export default function Principal() {
           </p>
         </div>
         <a
-          href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104&disablePlanChoice=true"
+          href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104"
           className="hidden lg:inline-flex lg:absolute lg:left-12 lg:top-[calc(100%+1.5rem)] items-center justify-center rounded-md bg-[rgb(218,165,32)] px-6 py-4 text-base font-medium text-white shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-[#C4941A]"
         >
           Quero entrar agora para a JC pagando{" "}
@@ -67,7 +67,7 @@ export default function Principal() {
 
       <div className="order-3 flex justify-center px-4 pt-2 lg:hidden z-20">
         <a
-          href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104&disablePlanChoice=true"
+          href="https://pay.ginastee.com/ck-6u6igb1?plan=110000104"
           className="inline-flex max-w-md items-center justify-center rounded-md bg-[rgb(218,165,32)] px-5 py-4 text-center text-sm font-medium text-white shadow-[0_0_20px_rgba(218,165,32,0.5),0_25px_50px_-12px_rgba(0,0,0,0.25)] transition-colors duration-300 hover:bg-[#C4941A]"
         >
           Quero entrar agora para a JC pagando{" "}
